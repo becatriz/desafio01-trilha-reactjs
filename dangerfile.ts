@@ -17,6 +17,6 @@ if (componentsFiles.created && !componentsTestFiles.created) {
 
 if (helperFiles.edited && !helperTestFiles.edited) {
   fail(
-    "Ops! Foi criado um novo helper, mas não foi criado o teste para ele 😓"
+    "Ops! Foi criado um novo helper, mas não foi criado o teste para ele ⛔"
   );
 }
