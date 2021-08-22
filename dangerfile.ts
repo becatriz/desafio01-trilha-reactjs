@@ -1,4 +1,4 @@
-import { danger, fail, warn, message, markdown } from "danger";
+import { danger, fail, warn, message } from "danger";
 
 const hasPRCorrectTitle = danger.github.pr.title.includes("[BS-") || danger.github.pr.title.includes("fix:")
 
@@ -42,5 +42,12 @@ if(danger.github.pr.requested_reviewers.length === 0){
 if(stylesFiles.edited){
   message("É recomendado marcar o usuário Zé nessa PR, pois houveram mudanças nos estilos globais")
 }
+
+danger.git.JSONDiffForFile("package.json").then((diff) => {
+   if(diff.version.after < diff.version.before ){
+    fail(`Ops! A versão(${diff.version.after}) do pacote enviado é menor do que a versão(${diff.version.before}) do pacote anterior, verifique e evie a PR novamente ⛔`);
+   }
+})
+
 
 
