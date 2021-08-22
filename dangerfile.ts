@@ -44,7 +44,7 @@ if(stylesFiles.edited){
 }
 
 danger.git.JSONDiffForFile("package.json").then((diff) => {
-   if(diff.version.after < diff.version.before ){
+   if(diff.version?.after < diff.version?.before ){
     fail(`Ops! A versão(${diff.version.after}) do pacote enviado é menor do que a versão(${diff.version.before}) do pacote anterior, verifique e evie a PR novamente ⛔`);
    }
 })
