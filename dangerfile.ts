@@ -28,7 +28,7 @@ if (helperFiles.edited && !helperTestFiles.edited) {
 }
 
 if(!hasPRCorrectTitle){
-  fail("Ops! Titulo da PR esta incorreto. Um exemplo correto seria [BS-2802] ajusta elemento css ou fix: ajusta elemento css")
+  fail(`Ops! Titulo da PR esta incorreto. Um exemplo correto seria [BS-2802] ${danger.github.pr.title} ou fix: ${danger.github.pr.title}`)
 }
 
 if(hasNumberOfLinesAddedInPRAllowed){
