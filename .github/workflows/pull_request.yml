@@ -1,9 +1,9 @@
 name: "PR: Danger"
 
 on:
-  - pull_request:
-      branches:
-        - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
   danger:
