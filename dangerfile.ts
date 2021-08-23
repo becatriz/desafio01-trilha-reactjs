@@ -40,7 +40,7 @@ if(danger.github.pr.requested_reviewers.length === 0){
 }
 
 if(stylesFiles.edited){
-  message("É recomendado marcar o usuário Zé nessa PR, pois houveram mudanças nos estilos globais")
+  message("É recomendado marcar o usuário @rebecacruzbefore nessa PR, pois houveram mudanças nos estilos globais")
 }
 
 danger.git.JSONDiffForFile("package.json").then((diff) => {
