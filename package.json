@@ -1,12 +1,12 @@
 {
   "name": "01-github-explorer",
-  "version": "1.0.0",
+  "version": "-1.0.0",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
     "dev": "webpack serve",
     "build": "cross-env NODE_ENV=production webpack",
-    "test": "jest --watchAll"
+    "test": "jest"
   },
   "dependencies": {
     "react": "^17.0.1",
@@ -28,6 +28,7 @@
     "babel-preset-react-app": "^10.0.0",
     "cross-env": "^7.0.3",
     "css-loader": "^5.0.1",
+    "danger": "^10.6.6",
     "faker": "^5.4.0",
     "html-webpack-plugin": "^4.5.1",
     "identity-obj-proxy": "^3.0.0",
